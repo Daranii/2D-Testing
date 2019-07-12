@@ -5,12 +5,18 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public GameObject loadingScreen;
-    public GameObject sliderGO;
-    public GameObject loadTextGO;
-    public Slider slider;
-    public Text progressText;
-    public Animator animator;
+/*    [SerializeField]
+    private GameObject loadingScreen;*/
+    [SerializeField]
+    private GameObject sliderGO;
+    [SerializeField]
+    private GameObject loadTextGO;
+    [SerializeField]
+    private Slider slider;
+    [SerializeField]
+    private Text progressText;
+    [SerializeField]
+    private Animator animator;
 
     public void FadeToLoad()
     {
