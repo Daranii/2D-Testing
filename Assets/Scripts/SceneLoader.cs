@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// TO DO: Implement Singleton in SceneLoader but without persistance to be able to have custom settings on a per scene basis.
 public class SceneLoader : MonoBehaviour
 {
 /*    [SerializeField]
@@ -33,6 +34,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene ()
     {
+        // TO DO: Fix hardcoding to next scene number 
         sliderGO.SetActive(true);
         loadTextGO.SetActive(true);
         StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));
