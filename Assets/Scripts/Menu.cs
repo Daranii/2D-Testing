@@ -6,8 +6,10 @@ using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
-    public SceneLoader sceneLoader;
-    public GameObject menu;
+    [SerializeField]
+    private SceneLoader sceneLoader = null;
+    [SerializeField]
+    private GameObject menu = null;
     public void PlayGame()
     {
         menu.SetActive(false);

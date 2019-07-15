@@ -9,15 +9,15 @@ public class SceneLoader : MonoBehaviour
 /*    [SerializeField]
     private GameObject loadingScreen;*/
     [SerializeField]
-    private GameObject sliderGO;
+    private GameObject sliderGO = null;
     [SerializeField]
-    private GameObject loadTextGO;
+    private GameObject loadTextGO = null;
     [SerializeField]
-    private Slider slider;
+    private Slider slider = null;
     [SerializeField]
-    private Text progressText;
+    private Text progressText = null;
     [SerializeField]
-    private Animator animator;
+    private Animator animator = null;
 
     public void FadeToLoad()
     {
