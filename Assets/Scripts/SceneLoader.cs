@@ -6,8 +6,8 @@ using UnityEngine.UI;
 // TO DO: Implement Singleton in SceneLoader but without persistance to be able to have custom settings on a per scene basis.
 public class SceneLoader : MonoBehaviour
 {
-/*    [SerializeField]
-    private GameObject loadingScreen;*/
+    /*  [SerializeField]
+        private GameObject loadingScreen;*/
     [SerializeField]
     private GameObject sliderGO = null;
     [SerializeField]
@@ -32,7 +32,7 @@ public class SceneLoader : MonoBehaviour
         animator.SetTrigger("FadeOut");
     }
 
-    public void LoadScene ()
+    public void LoadScene()
     {
         // TO DO: Fix hardcoding to next scene number 
         sliderGO.SetActive(true);
@@ -46,11 +46,11 @@ public class SceneLoader : MonoBehaviour
         loadTextGO.SetActive(false);
     }
 
-    IEnumerator LoadAsync (int index)
-    { 
+    IEnumerator LoadAsync(int index)
+    {
         AsyncOperation data = SceneManager.LoadSceneAsync(index);
 
-        while(!data.isDone)
+        while (!data.isDone)
         {
             float progress = Mathf.Clamp01(data.progress / 0.9f);
             slider.value = progress;
@@ -63,6 +63,6 @@ public class SceneLoader : MonoBehaviour
     void Update()
     {
         //if (Input.GetMouseButtonDown(0))
-            //FadeToLoad();
+        //    FadeToLoad();
     }
 }

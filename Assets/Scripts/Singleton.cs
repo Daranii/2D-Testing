@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
@@ -21,7 +19,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                 Debug.LogWarning($"[{nameof(Singleton)}<{typeof(T)}>] Instance will not be returned because application is quitting.");
                 return null;
             }*/
-            lock(Lock)
+            lock (Lock)
             {
                 if (_instance != null)
                     return _instance;
@@ -48,7 +46,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     protected virtual void Awake()
     {
-        if(_persistent)
+        if (_persistent)
             DontDestroyOnLoad(gameObject);
         _ = Instance;
     }
